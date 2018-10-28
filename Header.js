@@ -13,11 +13,12 @@ class Header extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text> Header </Text>
         <TextInput
           style={styles.texto}
           onChangeText={this.props.cambiarTexto}
           placeholder="Escribe aquí tu texto"
+          onSubmitEditing={this.props.agregar}
+          value={this.props.texto}
         />
       </View>
     );
@@ -32,6 +33,7 @@ const styles = StyleSheet.create({
   },
   texto: {
     paddingHorizontal: 16,
+    fontSize: 24,
   },
 });
 
